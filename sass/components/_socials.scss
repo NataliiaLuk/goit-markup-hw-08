@@ -1,0 +1,37 @@
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #FFF;
+    border-radius: 50%;
+
+    transition: background-color var(--standard);
+
+    &:hover,
+    &:focus {
+     background-color: var(--accent-bg);
+    }
+}
+
+.socials__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.socials__icon {
+    fill: var(--icon-cl);
+    transition: fill var(--standard);
+
+    .socials__item:hover &,
+    .socials__item:focus & {
+     fill: rgba(255, 255, 255, 1);
+    }
+}
+

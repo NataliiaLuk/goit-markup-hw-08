@@ -1,0 +1,41 @@
+body {
+    font-family: var(--main-font);
+    color: var(--main-cl);
+}
+
+img {
+    display: block;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.title {
+    margin-bottom: 50px;
+    color: var(--title-cl);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.08px;
+}
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+
+    padding: 10px 32px;
+
+    color: var(--white-cl);
+    background-color: var(--accent-bg);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.48px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}

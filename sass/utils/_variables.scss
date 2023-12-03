@@ -1,0 +1,24 @@
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+
+    /* text colors */
+
+    --main-cl: #757575;
+    --accent-cl: #2196F3;
+    --white-cl: #FFFFFF;
+    --title-cl: #212121;
+    --txt-footer-cl: rgba(255, 255, 255, 0.60);
+    --black-cl: #000000;
+    --border-cl: #ECECEC;
+    --icon-cl: rgba(175, 177, 184, 1);
+
+    /* background colors */
+    --dark-bg: #2F303A;
+    --light-bg: #F5F4FA;
+    --accent-bg: #2196F3;
+    --hero-bg: #c4c4c4;
+
+    /* Transitions */
+    --standard: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
