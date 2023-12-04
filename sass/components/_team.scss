@@ -3,16 +3,39 @@
 }
 
 .team__list {
-    display: flex;
+display: flex;
+flex-wrap: wrap;
+
+@include mq(mobile-only) {
+    display: block;
+}
+
+@include mq(tablet-only) {
+    gap: 30px;
+}
 }
 
 .team__member {
-    width: 270px;
-    margin-right: 30px;
     border-radius: 0px 0px 4px 4px;
 
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @include mq(mobile-only){
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+          }
+
+    @include mq(tablet-only) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+    @include mq(desktop) {
+        width: 270px;
+        margin-right: 30px;
+    }
+   
 }
 
 .team__member:last-child {
