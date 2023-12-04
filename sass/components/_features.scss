@@ -1,33 +1,31 @@
 .features__list {
     display: flex;
+   flex-wrap: wrap;
 
     @include mq(mobile-only) {
         display: block;
+    }
+
+    @include mq(tablet-only) {
+        gap: 30px;
     }
 }
 
 
 .features__item {
-    margin-bottom: 30px;
-
     @include mq(mobile-only) {
         width: 100%;
     }
 
     @include mq(tablet-only) {
-        flex-basis: 50%;
-
-        &:nth-child(2n+1) {
-            margin-right: 30px;
-        }
+        flex-basis: calc((100% - 30px) / 2);
     }
 
     @include mq(desktop) {
         width: 270px;
+        
+        &:not(:last-child) {
         margin-right: 30px;
-
-        &:last-child {
-        margin-right: 0;
     }
     }
     
