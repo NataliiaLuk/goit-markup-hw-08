@@ -1,10 +1,14 @@
 .follow {
-    margin-left: 93px;
+    @include mq(tablet) {
+        display: block;
+    }
+    // margin-left: 93px;
 }
 
 .follow__title {
     display: block;
-    margin-bottom: 35px;
+    // margin-bottom: 35px;
+    margin-bottom: 20px;
 
     color: var(--white-cl);
     font-weight: 700;
@@ -15,15 +19,18 @@
 }
 
 .follow__wrapper {
-    display: flex;
+    // display: flex;
+    display: block;
 }
 
 .follow__input {
     outline: transparent;
     padding: 15px 16px;
-    width: 358px;
+    // width: 358px;
+    width: 100%;
     height: 50px;
-    margin-right: 12px;
+    // margin-right: 12px;
+    margin-bottom: 20px;
 
     color: var(--white-cl);
 
