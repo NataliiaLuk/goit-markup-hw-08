@@ -1,8 +1,13 @@
 .follow {
-    @include mq(tablet) {
+    @include mq(tablet-only) {
         display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
-    // margin-left: 93px;
+
+    @include mq(desktop) {
+        margin-left: 93px;
+    } 
 }
 
 .follow__title {
@@ -19,17 +24,19 @@
 }
 
 .follow__wrapper {
-    // display: flex;
     display: block;
+
+    @include mq(desktop) {
+        display: flex;
+    }
 }
 
 .follow__input {
     outline: transparent;
     padding: 15px 16px;
-    // width: 358px;
     width: 100%;
     height: 50px;
-    // margin-right: 12px;
+  
     margin-bottom: 20px;
 
     color: var(--white-cl);
@@ -38,6 +45,11 @@
     border: 1px solid rgba(255, 255, 255, 0.30);
     background: rgba(33, 150, 243, 0.00);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+    @include mq(desktop) {
+    margin-right: 12px;
+    width: 358px;
+    }
 }
 
 .follow__btn {
