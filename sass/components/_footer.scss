@@ -12,17 +12,23 @@
         display: flex;
         align-items: baseline;
     }
+
+    @include mq(tablet-only) {
+        flex-wrap: wrap;
+    }
+
+    @include mq(desktop){
+        text-align: start;
+    }
 }
 
 .footer__address {
     @include mq(tablet-only) {
         margin-right: 165px;
-        ml
     }
     @include mq(desktop){
         margin-right: 70px;
-    }
-    
+    }  
 }
 
 .footer__logo {
@@ -42,6 +48,10 @@
     letter-spacing: 0.42px;
 
     text-align: center;
+
+    @include mq(desktop) {
+        text-align: start;
+    }
 
 }
 
@@ -90,8 +100,12 @@
 
 .footer__content {
     display: block;
-    align-items: center;
-    justify-content: center;
+
+    @include mq(tablet-only) {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
 }
 
 .footer-title {
