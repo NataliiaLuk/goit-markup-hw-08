@@ -1,8 +1,13 @@
 .contact {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
+
+    display: none;
+    
+        @include mq(tablet) {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+    }
 
 .contact__item {
     margin-left: 50px;
