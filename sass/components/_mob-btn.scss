@@ -11,12 +11,13 @@
 
     background-color: transparent;
 
+    &:hover,
+    &:focus {
+        fill: var(--accent-cl);
+    }
+
     @include mq(tablet) {
         display: none;
     }
-}
-
-.mob-btn__icon-close {
-    display: none;
 }
 
