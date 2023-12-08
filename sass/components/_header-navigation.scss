@@ -6,12 +6,6 @@
     }
 }
 
-.navigation__logo {
-    @include mq(mobile-only) {
-        opacity: 0;
-    }
-}
-
 .navigation__list {
     display: none;
 
