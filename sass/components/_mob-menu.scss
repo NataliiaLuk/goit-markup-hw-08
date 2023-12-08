@@ -1,8 +1,8 @@
 .mob-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 48px;
+    top: 0;
     height: 100vh;
     width: 100%;
     padding: 48px 40px;
@@ -14,16 +14,12 @@
     &.is-open {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+    }
+}
 
-    }
-
-    &.is-open .js-close-menu {
-        display: block;
-    }
-    
-     &.is-open .js-open-menu {
-        display: none;
-    }
+.mob-menu__nav-list {
+    display: block;
 }
 
 .mob-menu__link {
@@ -44,7 +40,9 @@
 }
 
 .mob-menu__item {
-    margin-bottom: 32px;
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
 }
 
 .mob-menu__contacts {
@@ -79,9 +77,10 @@
 }
 
 .mob-menu__socials-item {
-    padding-right: 10px;
+
     &:not(:last-child) {
             margin-right: 10px;
+            padding-right: 10px;
         }
 }
 
