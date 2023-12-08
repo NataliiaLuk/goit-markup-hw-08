@@ -4,19 +4,26 @@
     
         @include mq(tablet) {
             display: flex;
-            align-items: center;
             margin-left: auto;
+        }
+
+        @include mq(tablet-only) {
+            flex-direction: column;
         }
     }
 
 .contact__item {
-    margin-left: 50px;
+    @include mq(tablet-only) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    @include mq(desktop) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 }
-
-/* 
-.contact__item:last-child {
-    margin-left: 0;
-} */
 
 .contact__email {
     text-decoration: none;
