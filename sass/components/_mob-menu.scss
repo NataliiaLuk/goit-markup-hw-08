@@ -1,5 +1,4 @@
 .mob-menu {
-    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -8,13 +7,18 @@
     padding: 48px 40px;
 
     background-color: var(--white-cl);
-    z-index: 2;
+
+    z-index: 999;
+    transform: translateY(100%);
+    transition: transform var(--standard);
 
 
     &.is-open {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        transform: translateY(0);
     }
 }
 
@@ -84,7 +88,7 @@
         }
 }
 
-.after::after {
+.mob-menu__socials-item:not(:last-child) .mob-menu__socials-link::after {
     content: '';
     display: block;
     position: absolute;
