@@ -7,6 +7,9 @@
     background-color: rgba(0, 0, 0, 0.20);
     z-index: 10;
 
+    padding: 93px 15px;
+    overflow-y: scroll;
+
     opacity: 1;
     visibility: visible;
     transition: opacity var(--standard),
@@ -29,14 +32,19 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 528px;
-    height: 581px;
     border-radius: 4px;
     background: var(--white-cl);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
     transform: translate(-50%, -50%) scale(1.1);
     transition: transform var(--standard);
+
+    @include mq(mobile) {
+        max-width: 450px;
+    }
+    @include mq(desktop) {
+        max-width: 528px;
+    }
 }
 
 
@@ -61,10 +69,6 @@
     &:focus {
     fill: var(--accent-cl);
     }
-}
-
-.modal-form {
-    width: 448px;
 }
 
 .modal-form__title {
