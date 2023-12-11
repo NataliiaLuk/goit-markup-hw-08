@@ -4,13 +4,13 @@
 
 .team__list {
 display: flex;
-flex-wrap: wrap;
 
 @include mq(mobile-only) {
     display: block;
 }
 
 @include mq(tablet-only) {
+    flex-wrap: wrap;
     gap: 30px;
 }
 }
