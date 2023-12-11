@@ -34,8 +34,14 @@ body {
   color: var(--main-cl);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -378,6 +384,8 @@ p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 10;
+  padding: 93px 15px;
+  overflow-y: scroll;
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity var(--standard), visibility var(--standard);
@@ -400,8 +408,6 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
   border-radius: 4px;
   background: var(--white-cl);
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -412,6 +418,16 @@ p {
   transition: -webkit-transform var(--standard);
   transition: transform var(--standard);
   transition: transform var(--standard), -webkit-transform var(--standard);
+}
+@media screen and (min-width: 480px) {
+  .modal-wrapper {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-wrapper {
+    max-width: 528px;
+  }
 }
 
 .close-btn {
@@ -439,10 +455,6 @@ p {
 }
 .close-btn:hover, .close-btn:focus {
   fill: var(--accent-cl);
-}
-
-.modal-form {
-  width: 448px;
 }
 
 .modal-form__title {
@@ -785,8 +797,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 @media screen and (max-width: 767.98px) {
   .team__list {
@@ -795,6 +805,8 @@ p {
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .team__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 30px;
   }
 }
@@ -1359,7 +1371,6 @@ p {
 }
 
 .mob-menu {
-  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -1367,7 +1378,13 @@ p {
   width: 100%;
   padding: 48px 40px;
   background-color: var(--white-cl);
-  z-index: 2;
+  z-index: 999;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform var(--standard);
+  transition: -webkit-transform var(--standard);
+  transition: transform var(--standard);
+  transition: transform var(--standard), -webkit-transform var(--standard);
 }
 .mob-menu.is-open {
   display: -webkit-box;
@@ -1380,6 +1397,8 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .mob-menu__nav-list {
@@ -1442,7 +1461,7 @@ p {
   padding-right: 10px;
 }
 
-.after::after {
+.mob-menu__socials-item:not(:last-child) .mob-menu__socials-link::after {
   content: "";
   display: block;
   position: absolute;
