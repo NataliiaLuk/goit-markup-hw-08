@@ -1,7 +1,6 @@
 .header {
-    border-bottom: 1px solid var(--border-cl);
 
-    position: relative;
+    border-bottom: 1px solid var(--border-cl);
 
     @include mq(mobile-only) {
             padding-top: 16px;
@@ -10,7 +9,7 @@
 }
 
 .header__container {
-
+    position: relative;
     display: flex;
     align-items: center;
 }
