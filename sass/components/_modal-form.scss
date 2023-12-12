@@ -28,22 +28,28 @@
 }
 
 .modal-wrapper {
+    position: relative;
     padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+ 
     border-radius: 4px;
     background: var(--white-cl);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-    transform: translate(-50%, -50%) scale(1.1);
     transition: transform var(--standard);
 
     @include mq(mobile) {
         max-width: 450px;
+        width: 100%;
+        max-height: 609px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.1);
     }
     @include mq(desktop) {
         max-width: 528px;
+
     }
 }
 
@@ -209,9 +215,15 @@
 .modal-form__text-agreement {
     margin-bottom: 36px;
     color: var(--main-cl);
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.42px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.36px;
+    
+    @include mq(desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.42px;
+    }
 }
 
 .modal-form__terms {
