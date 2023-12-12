@@ -18,7 +18,7 @@
           <nav class="navigation">
               <a class="logo" href="/">Web<span class="logo__black">Studio</span></a>
               <button class="mob-btn js-open-menu" type="button"  aria-expanded="false"
-               aria-controls="mobile-menu">
+               aria-controls="mob-menu">
                 <svg width="40" height="40" aria-label="Перемикач мобільного меню">
                     <use class="mob-btn__icon-menu " href="./img/sprite.svg#icon-menu"></use>
                 </svg>
@@ -50,14 +50,14 @@
             </ul>
 
             <div class="mob-menu container js-menu-container">
-                <button class="mob-btn js-close-menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                <button id-="mob-btn" class="mob-btn mob-btn-close js-close-menu" type="button" aria-expanded="false" aria-controls="mob-menu">
                     <svg width="40" height="40" aria-label="Перемикач мобільного меню">
                         <use class="mob-btn__icon-close" href="./img/sprite.svg#icon-close_menu"></use>
                     </svg>
                 </button>
                 <ul class="mob-menu__nav list">
                     <li class="mob-menu__item">
-                        <a href="" class="mob-menu__link">Студія</a>
+                        <a href="" class="mob-menu__link active">Студія</a>
                     </li>
                     <li class="mob-menu__item">
                         <a href="" class="mob-menu__link">Портфоліо</a>
@@ -236,17 +236,17 @@
                         <source media="(min-width: 1200px)"
                         srcset="./img/team/member1/member1_dk.jpg 1x,
                         ./img/team/member1/member1_dk@2x.jpg  2x"
-                        type="image/jpg" />
+                        type="image/jpg" >
 
                         <source media="(min-width: 768px)" 
                         srcset="./img/team/member1/member1-tb.jpg 1x,
                         ./img/team/member1/member1-tb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
 
                         <source media="(max-width: 767px)" 
                         srcset="./img/team/member1/member1_mb.jpg 1x,
                         ./img/team/member1/member1_mb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
 
                         <img src="./img/team/member1/member1_mb.jpg" alt="Фото Ігоря" width="450" height="460" loading="lazy">
                     </picture>
@@ -290,17 +290,17 @@
                     <source media="(min-width: 1200px)"
                         srcset="./img/team/member2/member2_dk.jpg 1x,
                         ./img/team/member2/member2_dk@2x.jpg  2x"
-                        type="image/jpg" />
+                        type="image/jpg" >
 
                         <source media="(min-width: 768px)" 
                         srcset="./img/team/member2/member2_tb.jpg 1x,
                         ./img/team/member2/member2_tb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
 
                         <source media="(max-width: 767px)" 
                         srcset="./img/team/member2/member2_mb.jpg 1x,
                         ./img/team/member2/member2_mb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
                     <img src="./img/team/member2/member2_mb.jpg" alt="Фото Ольги" width="450" height="460" loading="lazy">
                    </picture>
                     <div class="team__descr">
@@ -343,17 +343,17 @@
                     <source media="(min-width: 1200px)"
                         srcset="./img/team/member3/member3_dk.jpg 1x,
                         ./img/team/member3/member3_dk@2x.jpg  2x"
-                        type="image/jpg" />
+                        type="image/jpg" >
 
                         <source media="(min-width: 768px)" 
                         srcset="./img/team/member3/member3_tb.jpg 1x,
                         ./img/team/member3/member3_tb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
 
                         <source media="(max-width: 767px)" 
                         srcset="./img/team/member3/member3_mb.jpg 1x,
                         ./img/team/member3/member3_mb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
                     <img src="./img/team/member3/member3_mb.jpg" alt="Фото Миколи" width="450" height="460" loading="lazy">
                    </picture>
                     <div class="team__descr">
@@ -396,17 +396,17 @@
                     <source media="(min-width: 1200px)"
                         srcset="./img/team/member4/member4_dk.jpg 1x,
                         ./img/team/member4/member4_dk@2x.jpg  2x"
-                        type="image/jpg" />
+                        type="image/jpg" >
 
                         <source media="(min-width: 768px)" 
                         srcset="./img/team/member4/member4_tb.jpg 1x,
                         ./img/team/member4/member4_tb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
 
                         <source media="(max-width: 767px)" 
                         srcset="./img/team/member4/member4_mb.jpg 1x,
                         ./img/team/member4/member4_mb@2x.jpg  2x" 
-                        type="image/jpg"/>
+                        type="image/jpg">
 
                     <img src="./img/team/member4/member4_mb.jpg" alt="Фото Михайла" width="450" height="460" loading="lazy">
                    </picture>
@@ -548,7 +548,7 @@
         <form class="follow" name="follow-up">
             <b class="follow__title">Підпишіться на розсилку</b>
            <div class="follow__wrapper">
-            <input class="follow__input" name="email" id="email" type="email" placeholder="E-mail" />
+            <input class="follow__input" name="email" id="email" type="email" placeholder="E-mail" >
             <button class="follow__btn btn" type="submit">Підписатися</button>
            </div>
         </form>
