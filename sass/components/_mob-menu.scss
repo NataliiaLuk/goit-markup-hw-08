@@ -37,6 +37,10 @@
 
     transition: color var(--standard);
 
+    &.active {
+        color: var(--accent-cl);
+    }
+
     &:hover,
     &:focus {
         color: var(--accent-cl);
