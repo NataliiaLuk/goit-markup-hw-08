@@ -122,7 +122,6 @@ p {
 
 .header {
   border-bottom: 1px solid var(--border-cl);
-  position: relative;
 }
 @media screen and (max-width: 767.98px) {
   .header {
@@ -132,6 +131,7 @@ p {
 }
 
 .header__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,8 +303,14 @@ p {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .overlay {
@@ -402,16 +408,12 @@ p {
 }
 
 .modal-wrapper {
+  position: relative;
   padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   border-radius: 4px;
   background: var(--white-cl);
   -webkit-box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  -webkit-transform: translate(-50%, -50%) scale(1.1);
-          transform: translate(-50%, -50%) scale(1.1);
   -webkit-transition: -webkit-transform var(--standard);
   transition: -webkit-transform var(--standard);
   transition: transform var(--standard);
@@ -420,6 +422,13 @@ p {
 @media screen and (min-width: 480px) {
   .modal-wrapper {
     max-width: 450px;
+    width: 100%;
+    max-height: 609px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -621,9 +630,16 @@ p {
 .modal-form__text-agreement {
   margin-bottom: 36px;
   color: var(--main-cl);
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.42px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.36px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__text-agreement {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+  }
 }
 
 .modal-form__terms {
@@ -1004,6 +1020,8 @@ p {
   .footer__container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding-right: 76px;
+    padding-left: 89px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1413,6 +1431,9 @@ p {
   -webkit-transition: color var(--standard);
   transition: color var(--standard);
 }
+.mob-menu__link.active {
+  color: var(--accent-cl);
+}
 .mob-menu__link:hover, .mob-menu__link:focus {
   color: var(--accent-cl);
 }
@@ -1486,9 +1507,11 @@ p {
   border: none;
   padding: 0;
   position: absolute;
-  top: 10px;
+  top: -8px;
   right: 15px;
   background-color: transparent;
+  -webkit-transition: var(--standard);
+  transition: var(--standard);
 }
 .mob-btn:hover, .mob-btn:focus {
   fill: var(--accent-cl);
@@ -1497,4 +1520,10 @@ p {
   .mob-btn {
     display: none;
   }
+}
+
+.mob-btn-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }/*# sourceMappingURL=main.css.map */
