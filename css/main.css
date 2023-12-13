@@ -1452,11 +1452,16 @@ p {
 
 .mob-menu__tel {
   color: var(--accent-cl);
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.68px;
   text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__tel {
+    font-size: 34px;
+  }
 }
 
 .mob-menu__mail {
@@ -1494,11 +1499,16 @@ p {
 .mob-menu__socials-link {
   position: relative;
   color: var(--accent-cl);
-  font-size: 18px;
+  font-size: 11px;
   font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.36px;
   text-decoration: none;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__socials-link {
+    font-size: 18px;
+  }
 }
 
 .mob-btn {
