@@ -171,9 +171,12 @@
 
 .modal-form__agreement {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     justify-content: center;
-
+    
+@include mq(mobile) {
+    align-items: baseline;
+}
 }
 
 .modal-form__custom-checkbox {
