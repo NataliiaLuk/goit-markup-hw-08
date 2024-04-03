@@ -2,10 +2,31 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    
+    @include mq(mobile-only) {
+          display: block;
+    }
+
+    @include mq(tablet-only) {
+        gap: 30px;
+    }
+
 }
 
 .cards-set__item {
     flex-basis: calc((100% - 60px) / 3);
+
+    @include mq(mobile-only) {
+            width: 100%;
+    
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    
+        @include mq(tablet-only) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
 }
 
 .cards-set__wrap {
