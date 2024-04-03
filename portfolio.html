@@ -17,12 +17,17 @@
     <div class="header__container container">
         <nav class="navigation">
             <a class="logo" href="/">Web<span class="logo__black">Studio</span></a>
-            <ul class="navigation__list list">
-                <li class="navigation__item"><a class="navigation__link" href="./index.html">Студія</a></li>
-                <li class="navigation__item"><a class="navigation__link navigation__link--active" href="./portfolio.html">Портфоліо</a></li>
-                <li class="navigation__item"><a class="navigation__link" href="#">Контакти</a></li>
-            </ul>
+            <button class="mob-btn js-open-menu" type="button" aria-expanded="false" aria-controls="mob-menu">
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                <use class="mob-btn__icon-menu " href="./img/sprite.svg#icon-menu"></use>
+            </svg>
         </nav>
+        <ul class="navigation__list list">
+            <li class="navigation__item"><a class="navigation__link" href="./index.html">Студія</a></li>
+            <li class="navigation__item"><a class="navigation__link navigation__link--active"
+                    href="./portfolio.html">Портфоліо</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="#">Контакти</a></li>
+        </ul>
         <ul class="contact list">
             <li class="contact__item">
                 <a class="contact__email" href="mailto:info@devstudio.com">
@@ -41,6 +46,50 @@
                 </a>
             </li>
         </ul>
+        <div id="mob-menu" class="mob-menu container js-menu-container">
+            <button class="mob-btn mob-btn-close js-close-menu" type="button" aria-expanded="false" aria-controls="mob-menu">
+                <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use class="mob-btn__icon-close" href="./img/sprite.svg#icon-close_menu"></use>
+                </svg>
+            </button>
+            <ul class="mob-menu__nav list">
+                <li class="mob-menu__item">
+                    <a href="./index.html" class="mob-menu__link">Студія</a>
+                </li>
+                <li class="mob-menu__item">
+                    <a href="./portfolio.html" class="mob-menu__link active">Портфоліо</a>
+                </li>
+                <li class="mob-menu__item">
+                    <a href="" class="mob-menu__link">Контакти</a>
+                </li>
+            </ul>
+        
+            <ul class="mob-menu__contacts list">
+                <li class="mob-menu__contact-item">
+                    <a href="tel:+380961111111" class="mob-menu__tel">+38 096 111 11 11</a>
+                </li>
+                <li class="mob-menu__contact-item">
+                    <a href="mailto:info@devstudio.com" class="mob-menu__mail">info@devstudio.com</a>
+                </li>
+            </ul>
+        
+            <ul class="mob-menu__socials list">
+                <li class="mob-menu__socials-item">
+                    <a href="" class="mob-menu__socials-link after">Instagram</a>
+                </li>
+                <li class="mob-menu__socials-item">
+                    <a href="" class="mob-menu__socials-link after">Twitter</a>
+                </li>
+                <li class="mob-menu__socials-item">
+                    <a href="" class="mob-menu__socials-link after">Facebook</a>
+                </li>
+                <li class="mob-menu__socials-item">
+                    <a href="" class="mob-menu__socials-link">LinkedIn</a>
+                </li>
+            </ul>
+        
+        </div>
+        
     </div>
 </header>
     <main>
@@ -62,7 +111,17 @@
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
                                     відвідувачу отримати
                                     вичерпні відомості про компанію чи приватну особу.</p>
-                                <img src="./img/gallery/techno.jpg" alt="Сайт" width="370">
+                                    <picture>
+                                        <source media="(min-width: 1200px)" srcset="./img/gallery/laptop_lg.jpg 1x,
+                                                            ./img/gallery/laptop_lg@2x.jpg  2x" type="image/jpg">
+                                    
+                                        <source media="(min-width: 768px)" srcset="./img/gallery/laptop_md.jpg 1x,
+                                                            ./img/gallery/laptop_md@2x.jpg  2x" type="image/jpg">
+                                    
+                                        <source media="(max-width: 767px)" srcset="./img/gallery/laptop_sm.jpg 1x,
+                                                            ./img/gallery/laptop_sm@2x.jpg  2x" type="image/jpg">
+                                        <img src="./img/gallery/laptop_sm.jpg" alt="Сайт" loading="lazy">
+                                    </picture>
                             </div>
                            
                             <div class="cards-set__bottom">
@@ -78,7 +137,17 @@
                                 дозволить
                                 відвідувачу отримати
                                 вичерпні відомості про компанію чи приватну особу.</p>
-                            <img src="./img/gallery/poster.jpg" alt="Постер змагань" width="370">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./img/gallery/design_lg.jpg 1x,
+                                                    ./img/gallery/design_lg@2x.jpg  2x" type="image/jpg">
+                                    
+                                <source media="(min-width: 768px)" srcset="./img/gallery/design_md.jpg 1x,
+                                                    ./img/gallery/design_md@2x.jpg  2x" type="image/jpg">
+                                    
+                                <source media="(max-width: 767px)" srcset="./img/gallery/design_sm.jpg 1x,
+                                                     ./img/gallery/design_sm@2x.jpg  2x" type="image/jpg">
+                                <img src="./img/gallery/design_sm.jpg" alt="Постер" loading="lazy">
+                            </picture>
                         </div>
                            
                            <div class="cards-set__bottom">
@@ -91,7 +160,17 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                              <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                               <img src="./img/gallery/restaurant.jpg" alt="Емблема ресторану" width="370">
+                            <picture>
+                                <source media="(min-width: 1200px)" srcset="./img/gallery/seafood_lg.jpg 1x,
+                                                     ./img/gallery/seafood_lg@2x.jpg  2x" type="image/jpg">
+                            
+                                <source media="(min-width: 768px)" srcset="./img/gallery/seafood_md.jpg 1x,
+                                                     ./img/gallery/seafood_md@2x.jpg  2x" type="image/jpg">
+                            
+                                <source media="(max-width: 767px)" srcset="./img/gallery/seafood_sm.jpg 1x,
+                                        ./img/gallery/seafood_sm@2x.jpg  2x" type="image/jpg">
+                                <img src="./img/gallery/seafood_sm.jpg" alt="Емблема ресторану" loading="lazy">
+                            </picture>
                             </div>
                           
                             <div class="cards-set__bottom">
@@ -104,7 +183,17 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                                <img src="./img/gallery/prime.jpg" alt="Навушники" width="370">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./img/gallery/headphones_lg.jpg 1x,
+                                                         ./img/gallery/headphones_lg@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(min-width: 768px)" srcset="./img/gallery/headphones_md.jpg 1x,
+                                                         ./img/gallery/headphones_md@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(max-width: 767px)" srcset="./img/gallery/headphones_sm.jpg 1x,
+                                                         ./img/gallery/headphones_sm@2x.jpg  2x" type="image/jpg">
+                                    <img src="./img/gallery/headphones_sm.jpg" alt="Навушники ресторану" loading="lazy">
+                                </picture>
                             </div>
                             
                             <div class="cards-set__bottom">
@@ -117,7 +206,17 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                            <img src="./img/gallery/boxes.jpg" alt="Коробки" width="370">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./img/gallery/boxes_lg.jpg 1x,
+                                                     ./img/gallery/boxes_lg@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(min-width: 768px)" srcset="./img/gallery/boxes_md.jpg 1x,
+                                                     ./img/gallery/boxes_md@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(max-width: 767px)" srcset="./img/gallery/boxes_sm.jpg 1x,
+                                                    ./img/gallery/boxes_sm@2x.jpg  2x" type="image/jpg">
+                                    <img src="./img/gallery/boxes_sm.jpg" alt="Коробки" loading="lazy">
+                                </picture>
                             </div>
                             
                            <div class="cards-set__bottom">
@@ -130,7 +229,17 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                               <img src="./img/gallery/inspiration.jpg" alt="Сайт" width="370">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./img/gallery/inspiration_lg.jpg 1x,
+                                                      ./img/gallery/inspiration_lg@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(min-width: 768px)" srcset="./img/gallery/inspiration_md.jpg 1x,
+                                                     ./img/gallery/inspiration_md@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(max-width: 767px)" srcset="./img/gallery/inspiration_sm.jpg 1x,
+                                                    ./img/gallery/inspiration_sm@2x.jpg  2x" type="image/jpg">
+                                    <img src="./img/gallery/inspiration_sm.jpg" alt="Сайт" loading="lazy">
+                                </picture>
                             </div>
 
                             <div class="cards-set__bottom">
@@ -143,7 +252,18 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                                <img src="./img/gallery/limited.jpg" alt="Журнал" width="370">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./img/gallery/limited_lg.jpg 1x,
+                                                     ./img/gallery/limited_lg@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(min-width: 768px)" srcset="./img/gallery/limited_md.jpg 1x,
+                                                     ./img/gallery/limited_md@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(max-width: 767px)" srcset="./img/gallery/limited_sm.jpg 1x,
+                                                    ./img/gallery/limited_sm@2x.jpg  2x" type="image/jpg">
+                                    <img src="./img/gallery/limited_sm.jpg" alt="Журнал" loading="lazy">
+                                </picture>
+
                             </div>
                             
                             <div class="cards-set__bottom">
@@ -156,7 +276,17 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                                <img src="./img/gallery/lab.jpg" alt="Етикетка" width="370">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./img/gallery/lab_lg.jpg 1x,
+                                                    ./img/gallery/lab_lg@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(min-width: 768px)" srcset="./img/gallery/lab_md.jpg 1x,
+                                                    ./img/gallery/lab_md@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(max-width: 767px)" srcset="./img/gallery/lab_sm.jpg 1x,
+                                                    ./img/gallery/lab_sm@2x.jpg  2x" type="image/jpg">
+                                    <img src="./img/gallery/lab_sm.jpg" alt="Проект LAB" loading="lazy">
+                                </picture>
                             </div>
                             
                            <div class="cards-set__bottom">
@@ -169,7 +299,17 @@
                         <a class="cards-set__link" href="#">
                             <div class="cards-set__wrap">
                                 <p class="cards-set__overlay">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
-                                <img src="./img/gallery/growing.jpg" alt="Додаток на моніторі" width="370">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="./img/gallery/grow_lg.jpg.jpg 1x,
+                                                     ./img/gallery/grow_lg@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(min-width: 768px)" srcset="./img/gallery/grow_md.jpg 1x,
+                                                     ./img/gallery/grow_md@2x.jpg  2x" type="image/jpg">
+                                
+                                    <source media="(max-width: 767px)" srcset="./img/gallery/grow_sm.jpg 1x,
+                                                      ./img/gallery/grow_sm@2x.jpg  2x" type="image/jpg">
+                                    <img src="./img/gallery/grow_sm.jpg" alt="Додаток на моніторі" loading="lazy">
+                                </picture>
                             </div>
                             
                             <div class="cards-set__bottom">
@@ -244,6 +384,8 @@
     </div>
 </footer>
 
+<script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
     
 </body>
 </html>
