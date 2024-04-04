@@ -1266,10 +1266,19 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
+}
+@media screen and (max-width: 767.98px) {
+  .filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .filter__item {
@@ -1277,6 +1286,11 @@ p {
 }
 .filter__item:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 767.98px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__btn {
@@ -1321,10 +1335,34 @@ p {
       flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (max-width: 767.98px) {
+  .cards-set {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards-set {
+    gap: 30px;
+  }
+}
 
 .cards-set__item {
   -ms-flex-preferred-size: calc((100% - 60px) / 3);
       flex-basis: calc((100% - 60px) / 3);
+}
+@media screen and (max-width: 767.98px) {
+  .cards-set__item {
+    width: 100%;
+  }
+  .cards-set__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards-set__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
 }
 
 .cards-set__wrap {
